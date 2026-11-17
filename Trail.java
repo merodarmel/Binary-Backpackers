@@ -41,7 +41,7 @@ public class Trail {
     public String getRegion() {
         return this.region;
     }
-    public void setRegion(String name){
+    public void setRegion(String region){
         if(region == null || region.trim().isEmpty()) {
             throw new IllegalArgumentException("Region cannot be empty.");
         }
