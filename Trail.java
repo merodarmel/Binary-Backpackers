@@ -3,7 +3,7 @@
  * @author Paul Sheridan and Matthew Rodarmel
  * This sets and gets the trails, and formats how they are printed.
  */
-package binarybackpackers.model
+package trailguide.model
 public class Trail {
     private String name;
     private String region;
