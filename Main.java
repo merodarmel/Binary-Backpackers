@@ -4,6 +4,13 @@ import trailguide.model.InMemoryTrailRepository;
 import trailguide.model.Trail;
 import trailguide.model.TrailRepository;
 
+/**
+ * Main.java
+ * @author Matthew Rodarmel and Paul Sheridan
+ * Runs a console demonstration of creating, listing, finding, updating,
+ * and deleting trails using the in-memory repository.
+ */
+
 public class Main {
     public static void main(String[] args) {
         TrailRepository repository = new InMemoryTrailRepository();
