@@ -45,7 +45,7 @@ public class Trail {
         if(region == null || region.trim().isEmpty()) {
             throw new IllegalArgumentException("Region cannot be empty.");
         }
-        this.region=region;
+        this.region=region.trim();
     }
     public float getLengthMiles() {
         return this.lengthMiles;
