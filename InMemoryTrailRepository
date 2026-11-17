@@ -1,0 +1,50 @@
+package trailguide.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class InMemoryTrailRepository implements TrailRepository {
+
+  private final List<Trail> trails = new ArrayList<>();
+  private int nextId = 1;
+
+  @Override
+  public List<Trail> findAll() {
+    return new ArrayList<>(trails);
+  }
+
+  @Override
+  public Trail findById(int id) {
+    for (Trail t : trails) {
+      if (t.getId() == id) {
+        return t;
+      }
+    }
+    return null;
+  }
+
+  @Override
+  public Trail save(Trail trail) {
+    if(trail == null {
+      throw new IllegalArgumentException("Cannot save a missing trail.");
+    }
+    if (trail.getId() == 0) {
+      drink.setId(nextId++);
+      trails.add(trail);
+      return trail;
+    }
+    for (int i = 0; i < trails.size(); i++) {
+      if (trails.get(i).getId() == trail.getId()) {
+        trails.set(i, trail);
+        return trail;
+      }
+    }
+    throw new IllegalArgumentException("No drink with id " + drink.getId() + " to update.");
+    }
+  }
+
+    @Override
+    public void deleteById(int id) {
+      trails.removeIf(trail -> trail.getId() == id);
+    }
+}
