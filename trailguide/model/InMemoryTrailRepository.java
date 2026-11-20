@@ -29,7 +29,7 @@ public class InMemoryTrailRepository implements TrailRepository {
       throw new IllegalArgumentException("Cannot save a missing trail.");
     }
     if (trail.getId() == 0) {
-      drink.setId(nextId++);
+      trail.setId(nextId++);
       trails.add(trail);
       return trail;
     }
@@ -39,8 +39,7 @@ public class InMemoryTrailRepository implements TrailRepository {
         return trail;
       }
     }
-    throw new IllegalArgumentException("No drink with id " + drink.getId() + " to update.");
-    }
+    throw new IllegalArgumentException("No trail with id " + trail.getId() + " to update.");
   }
 
     @Override
