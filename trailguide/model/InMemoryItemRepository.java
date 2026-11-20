@@ -3,7 +3,7 @@ package trailguide.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InMemoryTrailRepository implements TrailRepository {
+public class InMemoryItemRepository implements ItemRepository {
 
   private final List<Trail> trails = new ArrayList<>();
   private int nextId = 1;
@@ -24,7 +24,7 @@ public class InMemoryTrailRepository implements TrailRepository {
   }
 
   @Override
-  public Trail save(Trail trail) {
+  public Item save(Item trail) {
     if(trail == null) {
       throw new IllegalArgumentException("Cannot save a missing trail.");
     }
@@ -44,6 +44,6 @@ public class InMemoryTrailRepository implements TrailRepository {
 
     @Override
     public void deleteById(int id) {
-      trails.removeIf(trail -> trail.getId() == id);
+      trails.removeIf(trail -> item.getId() == id);
     }
 }
