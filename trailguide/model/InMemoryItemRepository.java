@@ -15,7 +15,7 @@ public class InMemoryItemRepository implements ItemRepository {
 
   @Override
   public Item findById(int id) {
-    for (Trail t : trails) {
+    for (Item t : trails) {
       if (t.getId() == id) {
         return t;
       }
