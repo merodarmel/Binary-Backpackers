@@ -1,5 +1,5 @@
 /**
- * Trail.java
+ * Item.java
  * @author Paul Sheridan and Matthew Rodarmel
  * This sets and gets the trails, and formats how they are printed.
  */
