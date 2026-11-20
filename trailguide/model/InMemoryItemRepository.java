@@ -5,16 +5,16 @@ import java.util.List;
 
 public class InMemoryItemRepository implements ItemRepository {
 
-  private final List<Trail> trails = new ArrayList<>();
+  private final List<Item> trails = new ArrayList<>();
   private int nextId = 1;
 
   @Override
-  public List<Trail> findAll() {
+  public List<Item> findAll() {
     return new ArrayList<>(trails);
   }
 
   @Override
-  public Trail findById(int id) {
+  public Item findById(int id) {
     for (Trail t : trails) {
       if (t.getId() == id) {
         return t;
