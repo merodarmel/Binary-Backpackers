@@ -33,7 +33,7 @@ public class Main {
         System.out.println(found == null ? "Trail not found." : "Found: " + found);
 
         System.out.println("\n=== UPDATE ===");
-        Item updatedMistTrail = new Trail(
+        Item updatedMistTrail = new Item(
                 mistTrail.getId(), "Mist Trail", "Yosemite National Park", 3.0f, false);
         System.out.println("Updated: " + repository.save(updatedMistTrail));
 
