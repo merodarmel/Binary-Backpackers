@@ -4,16 +4,16 @@
  * This sets and gets the trails, and formats how they are printed.
  */
 package trailguide.model;
-public class Trail {
+public class Item {
     private String name;
     private String region;
     private float lengthMiles;
     private boolean dogFriendly;
     private int id;
-    public Trail(String name, String region, float lengthMiles, boolean dogFriendly) {
+    public Item(String name, String region, float lengthMiles, boolean dogFriendly) {
         this(0, name, region, lengthMiles, dogFriendly);
     }
-    public Trail(int id, String name, String region, float lengthMiles, boolean dogFriendly) {
+    public Item(int id, String name, String region, float lengthMiles, boolean dogFriendly) {
         setId(id);
         setName(name);
         setRegion(region);
