@@ -25,7 +25,7 @@ public class InMemoryTrailRepository implements TrailRepository {
 
   @Override
   public Trail save(Trail trail) {
-    if(trail == null {
+    if(trail == null) {
       throw new IllegalArgumentException("Cannot save a missing trail.");
     }
     if (trail.getId() == 0) {
