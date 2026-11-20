@@ -44,6 +44,6 @@ public class InMemoryItemRepository implements ItemRepository {
 
     @Override
     public void deleteById(int id) {
-      trails.removeIf(trail -> item.getId() == id);
+      trails.removeIf(trail -> trail.getId() == id);
     }
 }
