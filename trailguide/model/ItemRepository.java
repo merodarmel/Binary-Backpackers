@@ -8,9 +8,9 @@ import java.util.List;
  * Defines the operations for finding, saving, and deleting trail records.
  * Implementations provide the storage for those records.
  */
-public interface TrailRepository {
-    List<Trail> findAll();
-    Trail findById(int id);
-    Trail save(Trail trail);
+public interface ItemRepository {
+    List<Item> findAll();
+    Item findById(int id);
+    Item save(Item trail);
     void deleteById(int id);
 }
